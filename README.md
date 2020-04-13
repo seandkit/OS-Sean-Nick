@@ -9,7 +9,7 @@ This is the README file from nick-sean-ca2
 * Pushed with `git push ..`
 
 ## Example of Syntax Highlighting
-```
+```c
 include <stdio.h>
 
 int main() {
