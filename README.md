@@ -7,6 +7,7 @@ This is the README file from nick-sean-ca2
 * Added files to staging area with `git add`
 * Commited with `git commit`
 * Pushed with `git push ..`
+* Pulled from origin with `git pull ...`
 
 ## Example of Syntax Highlighting
 ```c
