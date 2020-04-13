@@ -14,7 +14,7 @@ This is the README file from nick-sean-ca2
 include <stdio.h>
 
 int main() {
-	printf("This is just an example");
+	printf("This is Nicks example");
 	return 0;
 } 
 ```
