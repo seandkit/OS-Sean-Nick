@@ -1,4 +1,4 @@
-# This runs Section 3 Task 1
-run-task-9:
-	cat access.log | cut -d' ' -f1 | sort -u
+# This runs Section 3 Task 3
+run-task-10:
+	 cat access.log | grep '404 [0-9]' | egrep -o  '".*" ' 
 
