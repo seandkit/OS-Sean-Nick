@@ -1,4 +1,4 @@
-# This runs Section 2 Task 1
-run-task-5:
-	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt
+# This runs Section 3 Task 1
+run-task-8:
+	tail -n 10 access.log
 
