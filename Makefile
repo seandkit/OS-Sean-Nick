@@ -1,3 +1,31 @@
+CC				= gcc
+FLAGS			= -Wall -Wextra -Wpedantic
+SOURCES		= $(wildcard *.c) $(wildcard lib/*.c)
+OBJECTS 	= $(patsubst %.c, build/%.o, ${SOURCES})
+
+## $(info $$SOURCES is [${SOURCES}])
+## $(info $$OBJECTS is [${OBJECTS}])
+
+# This target is the final compile and depends on other targets
+link: ${OBJECTS}
+	${CC} $^ -o build/main
+
+# This target compiles just the main.c (creates an object file)
+build/main.o: main.c
+	${CC} -c ${FLAGS} $< -o $@
+
+# This target compiles just the lib/*.o (creates an object file)
+build/lib/%.o: lib/%.c
+	${CC} -c ${FLAGS} $< -o $@
+
+# Removes all built files, and re-created the build directory
+clean:
+	rm -rf ./build && mkdir -p build/lib
+
+# Run the solution
+run:
+	./build/main
+
 # This runs Section 1 Task 1
 run-task-1:
 	printf "The quick brown fox jumps over the lazy dog \n" | wc -w
