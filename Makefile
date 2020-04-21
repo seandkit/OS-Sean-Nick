@@ -3,9 +3,6 @@ FLAGS			= -Wall -Wextra -Wpedantic
 SOURCES		= $(wildcard *.c) $(wildcard lib/*.c)
 OBJECTS 	= $(patsubst %.c, build/%.o, ${SOURCES})
 
-## $(info $$SOURCES is [${SOURCES}])
-## $(info $$OBJECTS is [${OBJECTS}])
-
 # This target is the final compile and depends on other targets
 link: ${OBJECTS}
 	${CC} $^ -o build/main
@@ -45,3 +42,8 @@ run-task-5:
 # This runs Section 2 Task 2
 run-task-6:
 	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt | cut -c4-5
+
+# This runs Section 2 Task 3
+run-task-7: ${OBJECTS}
+	${CC} $^ -o build/main;
+	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt | ./build/main > rgba-colours.txt

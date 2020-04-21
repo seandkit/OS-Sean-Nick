@@ -7,12 +7,11 @@ int ensurergba () {
 	size_t length = 0;
 	while (getline(&line, &length, stdin) != -1) {
 
-		line[length - 1] = '\0';
-		if (line[length - 8] == '#') {
-			printf("%sFF\n", line);
+		if (strlen(line) == 8) {
+			printf("%.*sFF\n", (int)strlen(line) - 1, line);
 		}
 		else {
-			printf("%s\n", line);
+			printf("%s", line);
 		}
 	}
 
