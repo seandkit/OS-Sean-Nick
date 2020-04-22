@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int ensurergba () {
+int main () {
 
 	char* line;
 	size_t length = 0;
