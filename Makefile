@@ -1,4 +1,3 @@
-# This runs Section 3 Task 5
-run-task-12:
-	 cat access.log | grep -P ' ([5-9]|[0-9][0-9]) ' | egrep -o  '".*" ' | sort | uniq -c
-
+# This runs Section 3 Task 4
+run-task-11:
+	cat access.log | egrep "(MSIE [0-9].[0-9];|Trident/7.0;|rv:11.0)" > access.ie.log  
