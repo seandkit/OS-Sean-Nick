@@ -32,4 +32,5 @@ run-task-7:
 
 # This runs Section 3 Task 5
 run-task-12:
-	cat access.log | grep -P ' ([5-9]|[0-9][0-9]) ' | egrep -o  '".*" ' | sort | uniq -c
+	${CC} ${FLAGS} lib/task5.c -o build/lib/task5;
+	cat access.log | egrep -o  '".* ([5-9]|[0-9][0-9]) "'| cut -d' ' -f1-3,5 | sort | ./build/lib/task5
