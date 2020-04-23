@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CC				= gcc
 FLAGS			= -Wall -Wextra -Wpedantic
 
@@ -24,7 +23,8 @@ run-task-5:
 
 # This runs Section 2 Task 2
 run-task-6:
-	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt | cut -c4-5
+	${CC} ${FLAGS} lib/hextodecimal.c -o build/lib/hextodecimal;
+	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt | cut -c4-5 | ./build/lib/hextodecimal
 
 # This runs Section 2 Task 3
 run-task-7:
