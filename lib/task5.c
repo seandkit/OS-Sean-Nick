@@ -17,7 +17,7 @@ int main () {
 			if (part == 0) {
 				if (strcmp(path, currpath) != 0) {
 					if (print == 1) {
-						printf("\n\x1B[33mPath: %s Total Requests: %d \n\x1B[32mShortest Time: %d\t\x1B[31mLongest Time: %d\n\x1B[34mAverage Processing Time: %.1f\n\n\n", currpath, counter, lowest, highest, average/counter);
+						printf("\n\x1B[33mPath:\"%s\" Total Requests: %d \n\x1B[32mShortest Time: %d\n\x1B[31mLongest Time: %d\n\x1B[34mAverage Processing Time: %.1f\n\n\n", currpath, counter, lowest, highest, average/counter);
 					}
 					strcpy(currpath, path);
 					print = 1;
@@ -58,6 +58,6 @@ int main () {
 			path = strtok(NULL, "\"");
 		}
 	}
-	printf("\x1B[33mPath: %s Total Requests: %d \n\x1B[32mShortest Time: %d\n\x1B[31mLongest Time: %d\n\x1B[34mAverage Processing Time: %.1f\n\n\n\x1B[37m", currpath, counter, lowest, highest, average/counter);
+	printf("\x1B[33mPath:\"%s\" Total Requests: %d \n\x1B[32mShortest Time: %d\n\x1B[31mLongest Time: %d\n\x1B[34mAverage Processing Time: %.1f\n\n\n\x1B[37m", currpath, counter, lowest, highest, average/counter);
 	return 0;
 }
