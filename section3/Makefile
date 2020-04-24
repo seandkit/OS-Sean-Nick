@@ -15,7 +15,7 @@ run-task-2:
 
 # This runs Section 3 Task 3
 run-task-3:
-	 cat access.log | grep '404 [0-9]' | egrep -o  '".*" '
+	 cat access.log | grep ' 404 ' | egrep -o  '".*" '
 
 # This runs Section 3 Task 4
 run-task-4:
