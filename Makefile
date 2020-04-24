@@ -20,17 +20,17 @@ run-task-4:
 
 # This runs Section 2 Task 1
 run-task-5:
-	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt
+	grep -x '^#[a-fA-F0-9]\{6,8\}' colours.txt
 
 # This runs Section 2 Task 2
 run-task-6:
 	${CC} ${FLAGS} lib/hextodecimal.c -o build/lib/hextodecimal;
-	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt | cut -c4-5 | ./build/lib/hextodecimal
+	grep -x '^#[a-fA-F0-9]\{6,8\}' colours.txt | cut -c4-5 | ./build/lib/hextodecimal
 
 # This runs Section 2 Task 3
 run-task-7:
 	${CC} ${FLAGS} lib/ensurergba.c -o build/lib/ensurergba;
-	grep -x '^#[a-zA-Z0-9]\{6,8\}' colours.txt | ./build/lib/ensurergba > rgba-colours.txt
+	grep -x '^#[a-fA-F0-9]\{6,8\}' colours.txt | ./build/lib/ensurergba | sort -t',' -k4 -n > rgba-colours.txt
 
 # This runs Section 3 Task 2
 run-task-9:
