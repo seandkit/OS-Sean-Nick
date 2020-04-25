@@ -18,3 +18,6 @@ This is the README file from nick-sean-ca2
 
 ## Screencast Link
 https://youtu.be/I0nQFsziXcQ
+
+## Git repository Link
+https://github.com/seandkit/OS-Sean-Nick
