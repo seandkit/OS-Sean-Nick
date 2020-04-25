@@ -7,7 +7,7 @@ clean:
 
 # This runs Section 3 Task 1
 run-task-1:
-	tail -n 10 access.log
+	tail -10 access.log
 
 # This runs Section 3 Task 2
 run-task-2:

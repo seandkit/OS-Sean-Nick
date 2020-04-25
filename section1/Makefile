@@ -18,4 +18,4 @@ run-task-3:
 
 # This runs Section 1 Task 4
 run-task-4:
-	(tail -n 1 ./build/dkit.html; head -n 1 ./build/dkit.html) | tr '<>' '[]' > ./build/mangled.txt
+	(tail -1 ./build/dkit.html; head -1 ./build/dkit.html) | tr '<>' '[]' > ./build/mangled.txt
