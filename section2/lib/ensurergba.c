@@ -10,7 +10,6 @@ int main () {
 	while (getline(&line, &length, stdin) != -1) {
 
 		if (strlen(line) == 8 || strlen(line) == 10) {
-			//printf("%.*sFF\n", (int)strlen(line) - 1, line);
 			int a = 255;
 			memcpy(buffer, &line[1], 2);
 			int r = strtol(buffer, NULL, 16);
@@ -18,8 +17,6 @@ int main () {
 			int g = strtol(buffer, NULL, 16);
 			memcpy(buffer, &line[5], 2);
 			int b = strtol(buffer, NULL, 16);
-
-
 
 			if(strlen(line) == 10){
 				a = strtol(buffer, NULL, 16);
