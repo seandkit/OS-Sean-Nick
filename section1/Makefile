@@ -1,14 +1,16 @@
+STRING = The quick brown fox jumps over the lazy dog \n
+
 # Removes all built files, and re-created the build directory
 clean:
 	rm -rf ./build && mkdir -p build
 
 # This runs Section 1 Task 1
 run-task-1:
-	printf "The quick brown fox jumps over the lazy dog \n" | wc -w
+	printf "${STRING}" | wc -w
 
 # This runs Section 1 Task 2
 run-task-2:
-	printf "The quick brown fox jumps over the lazy dog\n" | tr a-z A-Z
+	printf "${STRING}" | tr a-z A-Z
 
 # This runs Section 1 Task 3
 run-task-3:
